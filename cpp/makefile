@@ -10,4 +10,4 @@ config: prepare
 	cd ./_build && ccmake ..
 
 run:
-	./_build/example/hello
+	./_build/singleton/singleton

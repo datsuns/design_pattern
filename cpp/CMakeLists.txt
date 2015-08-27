@@ -2,7 +2,7 @@
 
 cmake_minimum_required(VERSION 3.1)
 
-project(DesignPatternCImple)
+project(DesignPatternWithCpp)
 
 #set(CMAKE_C_COMPILER   i686-w64-mingw32-gcc)
 #set(CMAKE_CXX_COMPILER i686-w64-mingw32-g++)
@@ -18,6 +18,5 @@ set_property(GLOBAL PROPERTY C_STANDARD 11)
 #set(CMAKE_C_FLAGS   "-DcFgwPlatform_Windows")
 
 
-add_subdirectory(example)
-add_subdirectory(lib)
+add_subdirectory(singleton)
 
