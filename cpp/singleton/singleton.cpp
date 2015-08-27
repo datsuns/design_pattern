@@ -3,6 +3,9 @@
 using std::cout;
 using std::endl;
 
+#define LOG_HEADER	\
+	cout << "[" << this << "] ";
+
 class SingletonClass{
 	private: SingletonClass();
 	public: static SingletonClass* get_instance();
@@ -18,15 +21,18 @@ SingletonClass* SingletonClass::get_instance(){
 }
 SingletonClass::SingletonClass(){
 	this->now = 0;
+	LOG_HEADER;
 	cout << "Singleton born!" << endl;
 }
 int SingletonClass::method(int n){
-	cout << "[" << this << "] " << "singleton method! : " << n << endl;
+	LOG_HEADER;
+	cout << "singleton method! : " << n << endl;
 	this->now += n;
 	return n + 1;
 }
 void SingletonClass::status(){
-	cout << "[" << this << "] " << "now! : " << this->now << endl;
+	LOG_HEADER;
+	cout << "now! : " << this->now << endl;
 }
 
 int main(void){
