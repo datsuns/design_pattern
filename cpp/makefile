@@ -8,3 +8,6 @@ all: prepare
 
 config: prepare
 	cd ./_build && ccmake ..
+
+run:
+	./_build/example/hello
